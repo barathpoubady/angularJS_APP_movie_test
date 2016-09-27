@@ -1,0 +1,26 @@
+
+<div ng-controller="ApiMeteoCtrl">
+    
+    <form>
+        <input ng-change="search(movieName)" ng-model="movieName" placeholder="Titre du film" />
+        
+    </form>
+    <div ng-repeat="film in films">
+        <div class="row">
+            <div class="col-md-3">
+                <movie-img movies-list='film'></movie-img>
+            </div>
+            <div class="col-md-6" style="border: #8c8c8c 1px solid">
+
+                    {{ film.Title }}
+
+            </div>
+            <div class="col-md-3" style="border: #8c8c8c 1px solid">
+
+                    {{ film.Year }}
+
+            </div>
+        </div>
+        
+    </div>
+</div>
